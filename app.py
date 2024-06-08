@@ -15,6 +15,7 @@ st.title("Negotiation Practice AI Partner")
 
 with st.expander("About me"):
     st.write("I am your negotiaton bot powered by AI. You need to tell me a little about your negotiation case first.\
+     \n Before typing your answers, please open the sidebar and copy paste your openai API key in the window.\
      \n - If you want to ask for suggestions for your previous response, then pleaes type **SUGGESTIONS**.\
      \n - If you want to end the simulation, pleaes type **END**.\
      \n - If you want to restart the negotiation, please type **RESTART**.\
