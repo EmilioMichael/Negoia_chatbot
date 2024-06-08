@@ -1,23 +1,23 @@
 
 # from langchain_community.embeddings import SentenceTransformerEmbeddings
-from sentence_transformers import SentenceTransformer
-import pinecone
-from pinecone import Pinecone
+# from sentence_transformers import SentenceTransformer
+# import pinecone
+# from pinecone import Pinecone
 from openai import OpenAI
 import streamlit as st
 import os
 
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
 
 
-def find_match(input):
-    input_em = model.encode(input).tolist()
-    result = index.query(vector=input_em, top_k=2, includeMetadata=True)
-    if len(result['matches']) == 0:
-        return ''
-    else:
-        return result['matches'][0]['metadata']['text']+"\n"+result['matches'][1]['metadata']['text']
+# def find_match(input):
+#     model = SentenceTransformer('all-MiniLM-L6-v2')
+#     input_em = model.encode(input).tolist()
+#     result = index.query(vector=input_em, top_k=2, includeMetadata=True)
+#     if len(result['matches']) == 0:
+#         return ''
+#     else:
+#         return result['matches'][0]['metadata']['text']+"\n"+result['matches'][1]['metadata']['text']
 
 
 def query_refiner(openai_client, conversation, query):
